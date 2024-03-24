@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41563372858",
+    "project_id": "ecowise-2b72e",
+    "storage_bucket": "ecowise-2b72e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41563372858:android:ab21a54e3626306dea2403",
+        "android_client_info": {
+          "package_name": "com.example.ecowise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsNta1zcOzX0pS0_-WyKLypqQ0pb4rrrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

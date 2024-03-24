@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.EcoWise.HeadlineLarge.Bold" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+
+    <style name="TextAppearance.EcoWise.LabelMedium.Regular" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+
+    <style name="TextAppearance.EcoWise.LabelSmall.Regular" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+
+    <style name="TextAppearance.EcoWise.LabelSmall.Bold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+
+    <style name="TextAppearance.EcoWise.LabelMedium.Medium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+</resources>
