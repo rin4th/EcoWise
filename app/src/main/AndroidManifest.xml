@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EcoWise"
         tools:targetApi="31">
         <activity
+            android:name=".ui.merchant.PaymetActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.tambahDevice.AddDeviceActivity"
             android:exported="false" />
         <activity

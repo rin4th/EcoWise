@@ -46,6 +46,9 @@ android {
 dependencies {
 
     implementation(libs.firebase.auth)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
 
     val nav_version = "2.7.7"
 
