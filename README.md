@@ -30,3 +30,4 @@ Password : rizalganteng
 ![Elektronik](./screenshot/elektronik.png)
 ![Upload Device](./screenshot/add_device.png)
 ![Profile](./screenshot/profile.png)    
+![Merchant](./screenshot/merchant.png)

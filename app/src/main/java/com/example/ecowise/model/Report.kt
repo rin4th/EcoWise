@@ -7,14 +7,4 @@ data class Report(
     val penghematan: Int,
     val total_usage: Double
 )
-//{
-//    fun getDeviceHashMap(): HashMap<String, Any> {
-//        return hashMapOf(
-//            "id" to id,
-//            "bulan" to bulan,
-//            "tahun" to tahun,
-//            "penghematan" to penghematan,
-//            "total_usage" to total_usage,
-//        )
-//    }
-//}
+
