@@ -1,4 +1,4 @@
-# Better App
+# EcoWise App
 
 EcoWise merupakan solusi untuk membantu rumah tangga mengelola konsumsi energi dan mengurangi dampak emisi karbon dari peralatan rumah tangga mereka.
 
@@ -27,7 +27,11 @@ Password : rizalganteng
 ![Login](./screenshot/login.png)
 
 ![Welcome](./screenshot/welcome.png)
+
 ![Elektronik](./screenshot/elektronik.png)
+
 ![Upload Device](./screenshot/add_device.png)
+
 ![Profile](./screenshot/profile.png)    
+
 ![Merchant](./screenshot/merchant.png)
