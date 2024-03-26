@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnv_nav_graph"
+    app:startDestination="@id/it_beranda">
+
+    <fragment
+        android:id="@+id/it_elektronik"
+        android:name="com.example.ecowise.ui.bnv.ElektronikFragment"
+        android:label="fragment_elektronik"
+        tools:layout="@layout/fragment_elektronik" />
+    <fragment
+        android:id="@+id/it_tambah"
+        android:name="com.example.ecowise.TambahFragment"
+        android:label="fragment_tambah"
+        tools:layout="@layout/fragment_tambah" />
+    <fragment
+        android:id="@+id/it_beranda"
+        android:name="com.example.ecowise.ui.bnv.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" >
+    </fragment>
+    <fragment
+        android:id="@+id/it_merchant"
+        android:name="com.example.ecowise.ui.bnv.MerchantFragment"
+        android:label="fragment_merchant"
+        tools:layout="@layout/fragment_merchant" />
+    <fragment
+        android:id="@+id/it_akun"
+        android:name="com.example.ecowise.ui.bnv.AkunFragment"
+        android:label="fragment_akun"
+        tools:layout="@layout/fragment_akun" />
+
+</navigation>

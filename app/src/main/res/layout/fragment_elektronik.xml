@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="37dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".ui.bnv.ElektronikFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_consume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/konsumsi_energi"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_consume_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_statistik_konsumsi_energimu"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Regular"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_consume" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/down_shadow"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:src="@drawable/baseline_history_24"
+                android:contentDescription="@string/history" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_consume_desc"
+            android:layout_marginTop="36dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_harian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/down_shadow"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_total">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_harian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/tv_harian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/harian"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_harian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/vector"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_harian"
+                    app:layout_constraintStart_toEndOf="@+id/tv_harian"
+                    app:layout_constraintTop_toTopOf="@+id/tv_harian" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/cv_harian"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/graph_kw" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_energy_used"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_stats"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="17dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_energy_used"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp">
+
+
+
+                <ImageView
+                    android:id="@+id/iv_colokan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/colokan"
+                    android:src="@drawable/colokan"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_energy_used_today"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_today"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/konsumsi_energi"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+                    android:textColor="@color/grey_text"
+                    android:textSize="10sp"
+                    android:layout_marginStart="11dp"
+                    app:layout_constraintTop_toBottomOf="@id/v_divider"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_colokan"/>
+
+                <TextView
+                    android:id="@+id/tv_energy_used_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginStart="11dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_colokan"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_today"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="43kWh" />
+
+                <View
+                    android:id="@+id/v_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="1dp"
+                    android:background="@color/grey_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+                <ImageView
+                    android:id="@+id/iv_petir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/duit"
+                    android:layout_marginEnd="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_energy_used_month"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_month"
+                    app:layout_constraintTop_toTopOf="@+id/tv_month" />
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pengeluaran"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+                    android:textColor="@color/grey_text"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_energy_used_month"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_energy_used_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="11dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="Rp. 23.500" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perangkat_terhubung"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Medium"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/cv_energy_used"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_device_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/satu_langkah_penghematan_bermakna"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_device"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_all_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toTopOf="@+id/tv_device"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_energy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_device_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/card_energy"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_itemCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/iv_iconCourse"
+            android:layout_width="25dp"
+            android:layout_height="42dp"
+            tools:src="@drawable/kamar_tidur"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="42dp"
+            android:layout_marginStart="25dp"
+            android:contentDescription="" />
+
+        <TextView
+            android:id="@+id/tv_titleCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rizal Nur"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_iconCourse"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="41dp" />
+
+        <TextView
+            android:id="@+id/tv_taskQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="8/10"
+            app:layout_constraintStart_toStartOf="@id/tv_titleCourse"
+            app:layout_constraintTop_toBottomOf="@+id/tv_titleCourse"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tv_taskQuestionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="awdawdwa"
+            app:layout_constraintStart_toEndOf="@+id/tv_taskQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/tv_titleCourse"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:id="@+id/tv_timeRemining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="30min"
+            app:layout_constraintStart_toStartOf="@id/tv_titleCourse"
+            app:layout_constraintTop_toBottomOf="@+id/tv_taskQuestion"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tv_timeReminingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="awdadwaw"
+            app:layout_constraintStart_toEndOf="@+id/tv_timeRemining"
+            app:layout_constraintTop_toBottomOf="@+id/tv_taskQuestion"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/grey"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

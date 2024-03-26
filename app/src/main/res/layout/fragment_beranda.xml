@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingHorizontal="24dp"
+    tools:context=".ui.bnv.BerandaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="21dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_desc_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cv_profile"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Hallo User," />
+
+        <TextView
+            android:id="@+id/tv_desc_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hemat_penggunaan_energimu"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/cv_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="34dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="13dp"
+                android:layout_marginVertical="12dp"
+                android:contentDescription="@string/profile_user"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_energy_used"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginTop="17dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_profile">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_energy_used"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tv_energy_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:text="@string/energi_terpakai"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_energy_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+                    android:textColor="@color/grey_text"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_energy_used"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/_26_maret_2024" />
+
+                <View
+                    android:id="@+id/v_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@color/grey_light"
+                    app:layout_constraintTop_toBottomOf="@id/tv_energy_date" />
+
+                <ImageView
+                    android:id="@+id/iv_colokan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/colokan"
+                    android:src="@drawable/colokan"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_energy_used_today"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_today"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/hari_ini"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+                    android:textColor="@color/grey_text"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/iv_colokan"
+                    app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+                <TextView
+                    android:id="@+id/tv_energy_used_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/iv_colokan"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_today"
+                    tools:text="22.5kWh" />
+
+
+                <ImageView
+                    android:id="@+id/iv_petir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="11dp"
+                    android:src="@drawable/petir"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_energy_used_month"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_month"
+                    app:layout_constraintTop_toTopOf="@+id/tv_month" />
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/bulan_ini"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+                    android:textColor="@color/grey_text"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_energy_used_month"
+                    app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+                <TextView
+                    android:id="@+id/tv_energy_used_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="30dp"
+                    android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_month"
+                    tools:text="231.5 kWh" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_energy_used">
+
+            <ImageView
+                android:id="@+id/iv_kamarTidur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:src="@drawable/kamar_tidur"
+                app:layout_constraintEnd_toStartOf="@+id/iv_ruangKerja"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_kamarTidur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/kamar_tidur"
+                android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Regular"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_kamarTidur"
+                app:layout_constraintStart_toStartOf="@+id/iv_kamarTidur"
+                app:layout_constraintTop_toBottomOf="@+id/iv_kamarTidur" />
+
+            <ImageView
+                android:id="@+id/iv_ruangKerja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:src="@drawable/ruang_kerja"
+                app:layout_constraintEnd_toStartOf="@+id/iv_dapur"
+                app:layout_constraintStart_toEndOf="@+id/iv_kamarTidur"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ruangKerja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/ruang_kerja"
+                android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Regular"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_ruangKerja"
+                app:layout_constraintStart_toStartOf="@+id/iv_ruangKerja"
+                app:layout_constraintTop_toBottomOf="@+id/iv_ruangKerja" />
+
+            <ImageView
+                android:id="@+id/iv_dapur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:src="@drawable/dapur"
+                app:layout_constraintEnd_toStartOf="@+id/iv_kamarMandi"
+                app:layout_constraintStart_toEndOf="@+id/iv_ruangKerja"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_dapur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/dapur"
+                android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Regular"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dapur"
+                app:layout_constraintStart_toStartOf="@+id/iv_dapur"
+                app:layout_constraintTop_toBottomOf="@+id/iv_dapur" />
+
+            <ImageView
+                android:id="@+id/iv_kamarMandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:src="@drawable/kamar_mandi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_dapur"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_kamarMandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/kamar_mandi"
+                android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Regular"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_kamarMandi"
+                app:layout_constraintStart_toStartOf="@+id/iv_kamarMandi"
+                app:layout_constraintTop_toBottomOf="@+id/iv_kamarMandi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_tantangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/tantangan_hadrian"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_category" />
+
+        <TextView
+            android:id="@+id/tv_tantangan_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kumpulkan_poin_dengan_menghemat_energi"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tantangan" />
+
+        <ImageView
+            android:id="@+id/iv_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/grafik_beranda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tantangan_desc" />
+
+
+        <TextView
+            android:id="@+id/tv_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/perangkat_terhubung"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_stats" />
+
+        <TextView
+            android:id="@+id/tv_device_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/satu_langkah_penghematan_bermakna"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_device" />
+
+        <TextView
+            android:id="@+id/tv_all_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_device" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_device"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            app:layout_constraintTop_toBottomOf="@id/tv_device_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/card_device"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

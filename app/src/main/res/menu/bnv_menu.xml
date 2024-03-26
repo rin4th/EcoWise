@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/it_beranda"
+        android:icon="@drawable/beranda"
+        android:title="@string/beranda"
+        android:textColor="@color/item_color_selector"
+        app:itemIconTint="@color/item_color_selector"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/it_elektronik"
+        android:icon="@drawable/elektronik"
+        android:title="@string/elektronik"
+        android:textColor="@color/item_color_selector"
+        app:itemIconTint="@color/item_color_selector"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/it_tambah"
+        android:icon="@drawable/tambah"
+        android:title="@string/tambah"
+        android:textColor="@color/item_color_selector"
+        app:itemIconTint="@color/item_color_selector"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/it_merchant"
+        android:icon="@drawable/merchant"
+        android:title="@string/merchant"
+        android:textColor="@color/item_color_selector"
+        app:itemIconTint="@color/item_color_selector"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/it_akun"
+        android:icon="@drawable/akun"
+        android:title="@string/akun"
+        android:textColor="@color/item_color_selector"
+        app:itemIconTint="@color/item_color_selector"
+        app:showAsAction="ifRoom" />
+
+</menu>

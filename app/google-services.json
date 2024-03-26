@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "41563372858",
-    "project_id": "ecowise-2b72e",
-    "storage_bucket": "ecowise-2b72e.appspot.com"
+    "project_number": "410179503831",
+    "project_id": "ecowise-90a6e",
+    "storage_bucket": "ecowise-90a6e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:41563372858:android:ab21a54e3626306dea2403",
+        "mobilesdk_app_id": "1:410179503831:android:43764c013f59029da9d292",
         "android_client_info": {
           "package_name": "com.example.ecowise"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "410179503831-pnpk4r4l4qsvtsisus2gqf6pl5vcjb21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecowise",
+            "certificate_hash": "e45a3ce9a841c0abb98753f8882d9251acabe47d"
+          }
+        },
+        {
+          "client_id": "410179503831-j5ep27afhana6rl4i2krm8u5sf5qe3tu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCsNta1zcOzX0pS0_-WyKLypqQ0pb4rrrE"
+          "current_key": "AIzaSyDX5zXRoEmoRrdid1_G14IvKJMjshfbycs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410179503831-j5ep27afhana6rl4i2krm8u5sf5qe3tu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
