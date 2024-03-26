@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,10 +20,11 @@ class BerandaFragment : Fragment() {
 
     private lateinit var rv: RecyclerView
 
-    private var devices: MutableList<Device> = mutableListOf()
-
     private lateinit var deviceAdapter: DeviceAdapter
-    
+
+
+    private val viewModel: BerandaViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,46 +44,27 @@ class BerandaFragment : Fragment() {
 
         rv = view.findViewById(R.id.rv_device_beranda)
 
-        prepareResource()
+        setUpObserver()
+        prepareRecyclerView()
+
     }
 
-    private fun prepareResource(){
-        val db = FirebaseFirestore.getInstance()
-        val deviceRef = db.collection("device")
 
-        deviceRef.get().addOnCompleteListener {task ->
-            if(task.isSuccessful){
-                devices.clear()
-                for(document in task.result!!){
-                    val deviceData = document.data!!
-                    val device = Device(
-                        id = document.id,
-                        type = deviceData["type"] as String,
-                        lokasi = deviceData["lokasi"] as String,
-                        icon = deviceData["icon"] as String,
-                        merek = deviceData["merek"] as String,
-                        duration = deviceData["duration"] as String,
-                        daya = deviceData["daya"] as Int
-                    )
-                    devices.add(device)
-                }
-                prepareRecyclerView()
-                prepareAdapter()
+    private fun prepareRecyclerView() {
+        deviceAdapter = DeviceAdapter()
+        deviceAdapter.setOnItemClickCallback(object : DeviceAdapter.OnItemClickListener {
+            override fun onItemClick() {
             }
+        })
+        rv.adapter = deviceAdapter
+        rv.layoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
 
-        }
     }
 
-    private fun prepareRecyclerView(){
-        rv.layoutManager = GridLayoutManager(context, 2)
-        rv.setHasFixedSize(true)
-    }
 
-    private fun prepareAdapter(){
-        if (::deviceAdapter.isInitialized){
-            deviceAdapter.updateCourses(devices)
-        } else {
-
+    private fun setUpObserver() {
+        viewModel.listDevice.observe(viewLifecycleOwner) {
+            deviceAdapter.submitList(it)
         }
     }
 }

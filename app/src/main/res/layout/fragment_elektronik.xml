@@ -172,7 +172,7 @@
                     app:layout_constraintStart_toEndOf="@id/iv_colokan"
                     app:layout_constraintTop_toBottomOf="@+id/tv_today"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    tools:text="43kWh" />
+                    android:text="43kWh" />
 
                 <View
                     android:id="@+id/v_divider"
@@ -219,7 +219,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_month"
                     app:layout_constraintEnd_toEndOf="parent"
-                    tools:text="Rp. 23.500" />
+                    android:text="Rp. 23.500" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -262,10 +262,56 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_energy"
+            android:id="@+id/rv_device_elektronik"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
             app:layout_constraintTop_toBottomOf="@id/tv_device_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/card_device"/>
+
+        <TextView
+            android:id="@+id/tv_energy_elektronik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/laporan_penggunaan"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Medium"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/rv_device_elektronik"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_energy_elektronik_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_detail_energi_yang_dikeluarkan"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_energy_elektronik"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_all_energy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toTopOf="@+id/tv_energy_elektronik"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_energy_elektronik"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_energy_elektronik_desc"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/card_energy"/>

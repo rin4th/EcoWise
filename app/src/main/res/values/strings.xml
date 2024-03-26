@@ -62,4 +62,18 @@
     <string name="detail">Detail</string>
     <string name="mencari_perangkat">Mencari Perangkat</string>
     <string name="icon_type">icon type</string>
+    <string name="lihat_detail_energi_yang_dikeluarkan">Lihat detail energi yang dikeluarkan</string>
+    <string name="mencari_perangkat_di_sekitar_anda">Mencari Perangkat di Sekitar Anda</string>
+    <string name="silakan_aktifkan_wifi_dan_bluetooth_dekatkan_diri_anda_sedekat_mungkin_dengan_perangkat_yang_ingin_dicari_dan_tunggu_dengan_sabar">Silakan aktifkan wifi dan bluetooth, dekatkan diri Anda sedekat mungkin dengan perangkat yang ingin dicari dan tunggu dengan sabar.</string>
+    <string name="logo">Logo</string>
+    <string name="_22_5kwh">22.5kWh</string>
+    <string name="kategori">Kategori</string>
+    <string name="temukan_barang_yang_kamu_inginkan">Temukan barang yang kamu inginkan</string>
+    <string name="televisi">Televisi</string>
+    <string name="ac">AC</string>
+    <string name="cctv">CCTV</string>
+    <string name="kipas">Kipas</string>
+    <string name="_10_off">10% off</string>
+    <string name="rp_100_000">Rp 100,000</string>
+    <string name="exchange_offer_more"><![CDATA[Exchange Offer & more]]></string>
 </resources>

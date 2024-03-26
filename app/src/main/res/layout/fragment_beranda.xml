@@ -25,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/cv_profile"
             app:layout_constraintVertical_chainStyle="packed"
-            tools:text="Hallo User," />
+            android:text="Hallo User," />
 
         <TextView
             android:id="@+id/tv_desc_user"
@@ -100,7 +100,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_energy_used"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="@string/_26_maret_2024" />
+                    android:text="@string/_26_maret_2024" />
 
                 <View
                     android:id="@+id/v_divider"
@@ -145,7 +145,7 @@
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@id/iv_colokan"
                     app:layout_constraintTop_toBottomOf="@+id/tv_today"
-                    tools:text="22.5kWh" />
+                    android:text="@string/_22_5kwh" />
 
 
                 <ImageView
@@ -181,7 +181,7 @@
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_month"
-                    tools:text="231.5 kWh" />
+                    android:text="231.5 kWh" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -309,7 +309,7 @@
             android:layout_height="wrap_content"
             android:text="@string/kumpulkan_poin_dengan_menghemat_energi"
             android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Regular"
-            android:textColor="@color/grey"
+            android:textColor="@color/grey_text"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_tantangan" />

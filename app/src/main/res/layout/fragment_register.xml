@@ -65,6 +65,7 @@
                 android:id="@+id/et_nama"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
+                android:textColor="@color/black"
                 android:padding="0dp"
                 android:background="@android:color/transparent"/>
 
@@ -104,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="0dp"
+                android:textColor="@color/black"
                 android:background="@android:color/transparent"
                 android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold" />
 
@@ -143,6 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:paddingHorizontal="5dp"
+                android:textColor="@color/black"
                 android:padding="0dp"
                 android:background="@android:color/transparent"
                 android:inputType="textPassword"
@@ -186,6 +189,7 @@
                 android:paddingHorizontal="5dp"
                 android:background="@android:color/transparent"
                 android:inputType="textPassword"
+                android:textColor="@color/black"
                 android:padding="0dp"
                 android:textAppearance="@style/TextAppearance.EcoWise.LabelSmall.Bold"
                 android:textColorHint="@color/black" />

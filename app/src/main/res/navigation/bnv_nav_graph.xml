@@ -9,10 +9,12 @@
         android:id="@+id/it_elektronik"
         android:name="com.example.ecowise.ui.bnv.ElektronikFragment"
         android:label="fragment_elektronik"
-        tools:layout="@layout/fragment_elektronik" />
+        tools:layout="@layout/fragment_elektronik">
+
+    </fragment>
     <fragment
         android:id="@+id/it_tambah"
-        android:name="com.example.ecowise.TambahFragment"
+        android:name="com.example.ecowise.ui.tambahDevice.TambahFragment"
         android:label="fragment_tambah"
         tools:layout="@layout/fragment_tambah" />
     <fragment

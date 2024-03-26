@@ -8,16 +8,17 @@ data class Device(
     val merek: String,
     val duration: String,
     val daya: Int
-) {
-    fun getDeviceHashMap(): HashMap<String, Any> {
-        return hashMapOf(
-            "id" to id,
-            "type" to type,
-            "lokasi" to lokasi,
-            "icon" to icon,
-            "merek" to merek,
-            "duration" to duration,
-            "daya" to daya
-        )
-    }
-}
+)
+//{
+//    fun getDeviceHashMap(): HashMap<String, Any> {
+//        return hashMapOf(
+//            "id" to id,
+//            "type" to type,
+//            "lokasi" to lokasi,
+//            "icon" to icon,
+//            "merek" to merek,
+//            "duration" to duration,
+//            "daya" to daya
+//        )
+//    }
+//}

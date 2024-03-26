@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TambahFragment">
+    tools:context=".ui.tambahDevice.TambahFragment">
 
     <TextView
         android:id="@+id/tv_finding"
@@ -24,8 +24,35 @@
         android:layout_width="match_parent"
         android:layout_height="341dp"
         android:layout_marginTop="79dp"
+        android:src="@drawable/find"
         app:layout_constraintTop_toBottomOf="@+id/tv_finding"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_finding_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mencari_perangkat_di_sekitar_anda"
+        android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Medium"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_finding"
+        android:layout_marginTop="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_finding_desc"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:text="@string/silakan_aktifkan_wifi_dan_bluetooth_dekatkan_diri_anda_sedekat_mungkin_dengan_perangkat_yang_ingin_dicari_dan_tunggu_dengan_sabar"
+        android:textAppearance="@style/TextAppearance.EcoWise.LabelMedium.Regular"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="@color/grey_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_finding_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

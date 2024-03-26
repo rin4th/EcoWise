@@ -1,10 +1,11 @@
-package com.example.ecowise
+package com.example.ecowise.ui.tambahDevice
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ecowise.R
 
 
 class TambahFragment : Fragment() {
