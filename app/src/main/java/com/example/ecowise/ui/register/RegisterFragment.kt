@@ -41,7 +41,6 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
-        auth.signOut()
 
         binding.apply{
             btnRegister.setOnClickListener{

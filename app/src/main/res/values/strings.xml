@@ -61,4 +61,5 @@
     <string name="penghematan">Penghematan</string>
     <string name="detail">Detail</string>
     <string name="mencari_perangkat">Mencari Perangkat</string>
+    <string name="icon_type">icon type</string>
 </resources>

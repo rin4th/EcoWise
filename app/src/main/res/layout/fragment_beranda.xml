@@ -360,7 +360,7 @@
             app:layout_constraintTop_toTopOf="@+id/tv_device" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_device"
+            android:id="@+id/rv_device_beranda"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
